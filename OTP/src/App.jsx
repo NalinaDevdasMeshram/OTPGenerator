@@ -24,8 +24,7 @@ function App() {
       return "";
     }
   };
-  const handleotpsend = (e) => {
-    e.preventDefault();
+  const handleotpsend = () => {
     if (!phonenumber || !mobilenopattern.test(phonenumber)) {
       alert("please enter the validate number");
       return "";
@@ -40,9 +39,9 @@ function App() {
     newotp[i] = value.substring(value.length - 1);
     setOtp(newotp);
     // move to next input box if the current one  is filled
-    if (value && i < inputRef.current.length - 1) {
-      inputRef.current[i + 1].focus();
-    }
+    // if (value && i < inputRef.current.length - 1) {
+    //   inputRef.current[i + 1].focus();
+    // }
   };
 
   return (
